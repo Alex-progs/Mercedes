@@ -11,12 +11,6 @@ for (const btn of tabsHandlerElems)
 		tabsHandlerElems.forEach(item => item.classList.remove('design-list__item_active'));
 			btn.classList.toggle('design-list__item_active');
 
-			designTitles.forEach((title) => 
-			{
-				title.classList.toggle('hidden');
-			}
-			);
-
 			 tabsContentElems.forEach(conttent => 
 				{
 					if (conttent.dataset.tabsField === btn.dataset.tabsHandler)
