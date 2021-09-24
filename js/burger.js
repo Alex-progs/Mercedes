@@ -4,7 +4,7 @@ const humburgerMenu = document.querySelector('.menu');
 const listMenu = document.querySelectorAll('.menu-list');
 
 
-console.log(listMenu);
+
 
 
 const toggleMenu = () =>
@@ -13,7 +13,7 @@ const toggleMenu = () =>
 	huburgerBtn.classList.toggle('humburger-menu-active');
 }
 
-huburgerBtn.addEventListener('click', () => toggleMenu());
+huburgerBtn.addEventListener('click', toggleMenu);
 
 listMenu.forEach((listItem) => 
 	{

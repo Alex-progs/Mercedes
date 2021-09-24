@@ -15,8 +15,5 @@ newArry.forEach(link =>
 					behavior: 'smooth',
 					block: 'start'
 			})
-
-			console.log(document.getElementById(ID));
-		
 		})
 	})
