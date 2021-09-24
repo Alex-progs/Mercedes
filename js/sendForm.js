@@ -28,7 +28,7 @@ forms.forEach( (form) =>
 					checkSpace = true;
 					break;
 				}
-				console.log(name);
+				// console.log(name);
 			}
 		}
 
@@ -87,8 +87,14 @@ forms.forEach( (form) =>
 				})
 				.then((data) => 
 				{
-					alert("Данные успешно сохранены");// инфа про данные сохранены или редиректы
+					alert("Данные успешно сохранены");
 					form.reset();//очистка формы
+					console.log(event.target);
+					//TODO: закрытие модального окна после отправки данных. Попробывать по всплытию события
+					if (event.target.classList.contains('modal__form'))
+					{
+						document.querySelector('.modal').classList.add('hidden');
+					}					
 				})
 				.catch((error) => 
 				{
@@ -106,7 +112,7 @@ forms.forEach( (form) =>
 
 
 
-//TODO: закрытие модального окна после отправки данных
+
 
 
 
