@@ -14,6 +14,22 @@ form.addEventListener('submit', (event) =>
 					data[name] = value;
 				}
 			}
+/*Запретить отправку формы с пустыми полями или только пробелами */
+			for (const key in data) 
+			{
+				{
+					if (!data[key].trim().length)
+					{
+						console.log(`${key}---${data[key].trim().length}`);
+						data=undefined;
+						break;
+					}
+				}
+			}
+
+			if(data)
+			{
+
 				// 	fetch('https://jsonplaceholder.typicode.com/photos')
 				// 		.then((response) =>
 				// 		{
@@ -62,6 +78,11 @@ form.addEventListener('submit', (event) =>
 					{
 						alert(`Произошла ошибка Error ${error.message}`);
 					});
+			}
+			else
+			{
+				alert ("Заполните все поля");
+			}
 	});
 
 
